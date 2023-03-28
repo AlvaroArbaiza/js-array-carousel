@@ -38,7 +38,7 @@ let slides = [
 // Creo un ciclo per contare gli elementi di slides(array)
 for ( i = 0; i < slides.length; i++) {
 
-    document.querySelector(`.slides`).innerHTML = 
+    document.querySelector(`.slides`).innerHTML += 
     `
     <div class="item">
         <img src="./assets/img/${slides[i]}">
@@ -47,12 +47,18 @@ for ( i = 0; i < slides.length; i++) {
     console.log(slides[i])
 }
 
+const collection = document.getElementsByClassName("item");
+
+collection[0].classList.add("active");
+
+console.log(collection[0])
+
 // Creo variabili che mi selezionano i div dentro il DOM che userò poi per le funzioni
-// let prev = document.querySelector(`#prev`);
+let prev = document.querySelector(`#prev`);
 
-// let next = document.querySelector(`#next`);
+let next = document.querySelector(`#next`);
 
-// console.log(prev,next)
+console.log(prev,next)
 
 // slides[0].classList.add(`active`);
 
