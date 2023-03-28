@@ -47,6 +47,7 @@ for ( i = 0; i < slides.length; i++) {
     console.log(slides[i])
 }
 
+// Prendo la classe "item" dal Css e mi ricavo la prima immagine
 const collection = document.getElementsByClassName("item");
 
 collection[0].classList.add("active");
@@ -60,10 +61,29 @@ let next = document.querySelector(`#next`);
 
 console.log(prev,next)
 
-// slides[0].classList.add(`active`);
+let activeItem = 0
 
-// next.addEventListener(`click`, function() {
-    
-    
 
-// })
+// Scriviamo la funzione al click del button next per scorrere le immagini
+next.addEventListener(`click`, function() {
+
+    if ( activeItem < collection.length - 1 ) {
+
+        collection[activeItem].classList.remove("active");    
+        activeItem++
+        collection[activeItem].classList.add("active");
+    }
+
+})
+
+// Scriviamo la funzione al click del button prev per scorrere le immagini
+prev.addEventListener(`click`, function() {
+
+    if ( activeItem < collection.length - 1 ) {
+
+        collection[activeItem].classList.remove("active");    
+        activeItem++
+        collection[activeItem].classList.add("active");
+    }
+
+})
