@@ -61,8 +61,8 @@ let next = document.querySelector(`#next`);
 
 console.log(prev,next)
 
+// Indice
 let activeItem = 0
-
 
 // Scriviamo la funzione al click del button next per scorrere le immagini
 next.addEventListener(`click`, function() {
@@ -79,10 +79,10 @@ next.addEventListener(`click`, function() {
 // Scriviamo la funzione al click del button prev per scorrere le immagini
 prev.addEventListener(`click`, function() {
 
-    if ( activeItem < collection.length - 1 ) {
+    if ( activeItem > 0 ) {
 
         collection[activeItem].classList.remove("active");    
-        activeItem++
+        activeItem--
         collection[activeItem].classList.add("active");
     }
 
