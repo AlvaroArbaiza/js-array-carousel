@@ -28,19 +28,22 @@ Consigli del giorno:
 
 // Creo array immagini da inserire nel DOM successivamente
 let slides = [
-    `<img src="./assets/img/01.webp">`,
-    `<img src="./assets/img/02.webp">`,
-    `<img src="./assets/img/03.webp">`,
-    `<img src="./assets/img/04.webp">`,
-    `<img src="./assets/img/05.webp">`
+    `01.webp`,
+    `02.webp`,
+    `03.webp`,
+    `04.webp`,
+    `05.webp`
 ]
 
-console.log(slides)
+// Creo un ciclo per contare gli elementi di slides(array)
+for ( i = 0; i <= slides.length - 1; i++) {
 
-// Creo variabili che mi selezionano i div dentro il DOM che userò poi per le funzioni
-let prev = document.querySelector(`#prev`);
-
-let next = document.querySelector(`#next`);
-
-console.log(prev,next)
+    document.querySelector(`.slides`).innerHTML = 
+    `
+    <div class="item">
+        <img src="./assets/img/${slides[i]}">
+    </div>
+    `
+}
+console.log(slides[0])
 
