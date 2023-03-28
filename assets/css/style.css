@@ -25,10 +25,10 @@ span {
     cursor: pointer;
 }
 
-/* .item {
+.item {
     display: none;
-} */
+}
 
-.active {
+.item.active {
     display: block;
 }

@@ -36,7 +36,7 @@ let slides = [
 ]
 
 // Creo un ciclo per contare gli elementi di slides(array)
-for ( i = 0; i <= slides.length - 1; i++) {
+for ( i = 0; i < slides.length; i++) {
 
     document.querySelector(`.slides`).innerHTML = 
     `
@@ -44,6 +44,20 @@ for ( i = 0; i <= slides.length - 1; i++) {
         <img src="./assets/img/${slides[i]}">
     </div>
     `
+    console.log(slides[i])
 }
-console.log(slides[0])
 
+// Creo variabili che mi selezionano i div dentro il DOM che userò poi per le funzioni
+// let prev = document.querySelector(`#prev`);
+
+// let next = document.querySelector(`#next`);
+
+// console.log(prev,next)
+
+// slides[0].classList.add(`active`);
+
+// next.addEventListener(`click`, function() {
+    
+    
+
+// })
